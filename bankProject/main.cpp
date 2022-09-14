@@ -8,6 +8,11 @@ using namespace std;
 
 extern struct Account sA;
 
+void withdraw(Account& account, float amount) 
+{
+	account.balance = account.balance - amount;
+}
+
 int main(int argc, char **argv)
 {
 	string accountNumber = "123-45";
@@ -41,6 +46,10 @@ int main(int argc, char **argv)
 	Bank::printAccount(accountNumber3, cpf3, clientName3, balance3);
 	
 	cout << "Forth account: " << endl;
+	Bank::printAccount(account);
+	
+	cout << "Updating the forth account:" << endl;
+	withdraw(account, 10000.30);
 	Bank::printAccount(account);
 	
 	return 0;

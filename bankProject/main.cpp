@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <array>
 
 #include "printAccount.hpp"
 #include "accountStruct.hpp"
@@ -19,7 +20,13 @@ void withdraw(Account& account, float amount)
 		cout << "Withdraw amount should be positive." << endl;
 		return;
 	}
+	
 	account.balance = account.balance - amount;
+}
+
+void deposit(Account& account, float amount)
+{
+	account.balance += account.balance + amount;
 }
 
 int main(int argc, char **argv)
@@ -57,12 +64,17 @@ int main(int argc, char **argv)
 	cout << "Forth account: " << endl;
 	Bank::printAccount(account);
 	
-	cout << "Updating the forth account:" << endl;
-	withdraw(account, 10000.30);
-	Bank::printAccount(account);
+	std::array<float, 3> amountsToWithdraw = {10000.30, -10000.30, 331.31};
 	
-	withdraw(account, -10000.30);
-	Bank::printAccount(account);
+	cout << "Updating the forth account - Withdraw:" << endl;
+	for(unsigned short int i = 0; i < amountsToWithdraw.size(); i++) {
+		withdraw(account, amountsToWithdraw.at(i));
+		Bank::printAccount(account);
+	}
+		
+	cout << "Updating the forth account - Deposit:" << endl;
+	
+	
 	
 	return 0;
 }

@@ -10,6 +10,15 @@ extern struct Account sA;
 
 void withdraw(Account& account, float amount) 
 {
+	if(account.balance < amount) {
+		cout << "Insuficcient balance to withdraw." << endl;
+		return;
+	}
+	
+	if(amount < 0) {
+		cout << "Withdraw amount should be positive." << endl;
+		return;
+	}
 	account.balance = account.balance - amount;
 }
 
@@ -50,6 +59,9 @@ int main(int argc, char **argv)
 	
 	cout << "Updating the forth account:" << endl;
 	withdraw(account, 10000.30);
+	Bank::printAccount(account);
+	
+	withdraw(account, -10000.30);
 	Bank::printAccount(account);
 	
 	return 0;

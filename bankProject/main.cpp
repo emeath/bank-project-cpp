@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+
+#include "printAccount.hpp"
+
+using namespace std;
+
+int main(int argc, char **argv)
+{
+	string accountNumber = "123-45";
+	string cpf = "123.123.123-12";
+	string clientName = "Kiko";
+	float balance = 12345.6;
+	
+	string accountNumber2 = "098-76";
+	string cpf2 = "256.456.456-78";
+	string clientName2 = "Naruto";
+	float balance2 = 123.3;
+	
+	string accountNumber3 = "394-23";
+	string cpf3 = "323.232.123-43";
+	string clientName3 = "Gohan";
+	float balance3 = 3.40;
+	
+	cout << "First account: " << endl;
+	Bank::printAccount(accountNumber, cpf, clientName, balance);
+	
+	cout << "Second account: " << endl;
+	Bank::printAccount(accountNumber2, cpf2, clientName2, balance2);
+	
+	cout << "Third account: " << endl;
+	Bank::printAccount(accountNumber3, cpf3, clientName3, balance3);
+	
+	return 0;
+}

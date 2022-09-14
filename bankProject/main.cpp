@@ -26,6 +26,11 @@ void withdraw(Account& account, float amount)
 
 void deposit(Account& account, float amount)
 {
+	if(amount < 0) {
+		cout << "Deposit amount should be positive." << endl;
+		return;
+	}
+	
 	account.balance += amount;
 }
 

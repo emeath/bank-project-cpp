@@ -26,7 +26,7 @@ void withdraw(Account& account, float amount)
 
 void deposit(Account& account, float amount)
 {
-	account.balance += account.balance + amount;
+	account.balance += amount;
 }
 
 int main(int argc, char **argv)
@@ -65,15 +65,23 @@ int main(int argc, char **argv)
 	Bank::printAccount(account);
 	
 	std::array<float, 3> amountsToWithdraw = {10000.30, -10000.30, 331.31};
+	std::array<float, 3> amountsToDeposit = {-1000.3, 100.40, 400.32};
 	
-	cout << "Updating the forth account - Withdraw:" << endl;
-	for(unsigned short int i = 0; i < amountsToWithdraw.size(); i++) {
-		withdraw(account, amountsToWithdraw.at(i));
+	//    Avoid reallocating variable to iterate on for loop. 
+	// I wonder if this is a little performance gain...
+	unsigned short int i = 0; 
+	
+	cout << "~~~ Updating the forth account - Withdraw ~~~" << endl;
+	for(i = 0; i < amountsToWithdraw.size(); i++) {
+		withdraw(account, amountsToWithdraw.at(i)); //.at() verifies boundries limits
 		Bank::printAccount(account);
 	}
 		
-	cout << "Updating the forth account - Deposit:" << endl;
-	
+	cout << "~~~ Updating the forth account - Deposit ~~~" << endl;
+	for(i = 0; i < amountsToDeposit.size(); i++) {
+		deposit(account, amountsToDeposit.at(i));
+		Bank::printAccount(account);
+	}
 	
 	
 	return 0;

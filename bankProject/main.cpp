@@ -2,8 +2,11 @@
 #include <string>
 
 #include "printAccount.hpp"
+#include "accountStruct.hpp"
 
 using namespace std;
+
+extern struct Account sA;
 
 int main(int argc, char **argv)
 {
@@ -22,6 +25,12 @@ int main(int argc, char **argv)
 	string clientName3 = "Gohan";
 	float balance3 = 3.40;
 	
+	Account account;
+	account.accountNumber = "122-00";
+	account.cpf = "xxx.xxx.xxx-xx";
+	account.clientName = "Trunks";
+	account.balance = 333.33;
+	
 	cout << "First account: " << endl;
 	Bank::printAccount(accountNumber, cpf, clientName, balance);
 	
@@ -30,6 +39,9 @@ int main(int argc, char **argv)
 	
 	cout << "Third account: " << endl;
 	Bank::printAccount(accountNumber3, cpf3, clientName3, balance3);
+	
+	cout << "Forth account: " << endl;
+	Bank::printAccount(account);
 	
 	return 0;
 }

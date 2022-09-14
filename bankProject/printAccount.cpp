@@ -14,4 +14,13 @@ namespace Bank {
 		std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 		<< std::endl;
 	}
 	
+	void printAccount(const Account& account) 
+	{
+		std::cout << "Account number: " 	<< account.accountNumber 	<< std::endl;
+		std::cout << "CPF: " 				<< account.cpf 				<< std::endl;
+		std::cout << "Client name: " 		<< account.clientName 		<< std::endl;
+		std::cout << "Account balance: " 	<< account.balance			<< std::endl;
+		std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" 				<< std::endl;
+	}
+	
 }

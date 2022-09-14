@@ -93,6 +93,7 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="accountStruct.hpp"/>
     <File Name="printAccount.hpp"/>
     <File Name="printAccount.cpp"/>
     <File Name="main.cpp"/>

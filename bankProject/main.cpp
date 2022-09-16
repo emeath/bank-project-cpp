@@ -2,72 +2,47 @@
 #include <string>
 #include <array>
 
-#include "printAccount.hpp"
-#include "accountStruct.hpp"
+#include "Account.hpp"
 
 using namespace std;
 
-extern struct Account sA;
-
-void withdraw(Account& account, float amount) 
-{
-	if(account.balance < amount) {
-		cout << "Insuficcient balance to withdraw." << endl;
-		return;
-	}
-	
-	if(amount < 0) {
-		cout << "Withdraw amount should be positive." << endl;
-		return;
-	}
-	
-	account.balance = account.balance - amount;
-}
-
-void deposit(Account& account, float amount)
-{
-	if(amount < 0) {
-		cout << "Deposit amount should be positive." << endl;
-		return;
-	}
-	
-	account.balance += amount;
-}
-
 int main(int argc, char **argv)
 {
-	string accountNumber = "123-45";
-	string cpf = "123.123.123-12";
-	string clientName = "Kiko";
-	float balance = 12345.6;
+	Bank::Account account_1;
+	account_1.setNumber("123-45");
+	account_1.setCpf("123.123.123-12");
+	account_1.setClientName("Kiko");
+	account_1.deposit(12345.6);
 	
-	string accountNumber2 = "098-76";
-	string cpf2 = "256.456.456-78";
-	string clientName2 = "Naruto";
-	float balance2 = 123.3;
+	Bank::Account account_2;
+	account_2.setNumber("098-76");
+	account_2.setCpf("256.456.456-78");
+	account_2.setClientName("Naruto");
+	account_2.deposit(123.3);
 	
-	string accountNumber3 = "394-23";
-	string cpf3 = "323.232.123-43";
-	string clientName3 = "Gohan";
-	float balance3 = 3.40;
+	Bank::Account account_3;
+	account_3.setNumber("394-23");
+	account_3.setCpf("323.232.123-43");
+	account_3.setClientName("Gohan");
+	account_3.deposit(3.40);
 	
-	Account account;
-	account.accountNumber = "122-00";
-	account.cpf = "xxx.xxx.xxx-xx";
-	account.clientName = "Trunks";
-	account.balance = 333.33;
+	Bank::Account account_4;
+	account_4.setNumber("122-00");
+	account_4.setCpf("xxx.xxx.xxx-xx");
+	account_4.setClientName("Trunks");
+	account_4.deposit(333.33);
 	
 	cout << "First account: " << endl;
-	Bank::printAccount(accountNumber, cpf, clientName, balance);
+	account_1.printAccount();
 	
 	cout << "Second account: " << endl;
-	Bank::printAccount(accountNumber2, cpf2, clientName2, balance2);
+	account_2.printAccount();
 	
 	cout << "Third account: " << endl;
-	Bank::printAccount(accountNumber3, cpf3, clientName3, balance3);
+	account_3.printAccount();
 	
 	cout << "Forth account: " << endl;
-	Bank::printAccount(account);
+	account_4.printAccount();
 	
 	std::array<float, 3> amountsToWithdraw = {10000.30, -10000.30, 331.31};
 	std::array<float, 3> amountsToDeposit = {-1000.3, 100.40, 400.32};
@@ -78,14 +53,14 @@ int main(int argc, char **argv)
 	
 	cout << "~~~ Updating the forth account - Withdraw ~~~" << endl;
 	for(i = 0; i < amountsToWithdraw.size(); i++) {
-		withdraw(account, amountsToWithdraw.at(i)); //.at() verifies boundries limits
-		Bank::printAccount(account);
+		account_4.withdraw(amountsToWithdraw.at(i)); //.at() verifies boundries limits
+		account_4.printAccount();
 	}
 		
 	cout << "~~~ Updating the forth account - Deposit ~~~" << endl;
 	for(i = 0; i < amountsToDeposit.size(); i++) {
-		deposit(account, amountsToDeposit.at(i));
-		Bank::printAccount(account);
+		account_4.deposit(amountsToDeposit.at(i));
+		account_4.printAccount();
 	}
 	
 	

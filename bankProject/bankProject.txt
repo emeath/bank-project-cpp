@@ -1,1 +1,1 @@
-./Debug/printAccount.cpp.o ./Debug/main.cpp.o
+./Debug/main.cpp.o ./Debug/Account.cpp.o

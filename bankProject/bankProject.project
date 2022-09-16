@@ -93,9 +93,8 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
-    <File Name="accountStruct.hpp"/>
-    <File Name="printAccount.hpp"/>
-    <File Name="printAccount.cpp"/>
+    <File Name="Account.hpp"/>
+    <File Name="Account.cpp"/>
     <File Name="main.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>

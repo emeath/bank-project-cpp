@@ -11,6 +11,7 @@ Account::Account(std::string number, std::string cpf, std::string clientName)
 	clientName(clientName),
 	balance(0)
 {
+	validateClientNameSize();
 	numberOfAccounts++;
 }
 
@@ -93,4 +94,13 @@ void Account::printAccount()
 	std::cout << "Account balance: " << this->balance << std::endl;
 	std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
 }
+
+void Account::validateClientNameSize()
+{
+	if(clientName.size() < 3) {
+		std::cout << clientName << " <- Client name size is too short." << std::endl;
+		exit(1); // means that there was an error
+	}
+}
+
 }

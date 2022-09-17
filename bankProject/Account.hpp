@@ -11,6 +11,8 @@ private:
 	std::string clientName;
 	float balance;
 	static int numberOfAccounts;
+	
+	void validateClientNameSize();
 
 public:
 	Account(std::string number, std::string cpf, std::string clientName);

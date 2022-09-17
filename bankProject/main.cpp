@@ -59,5 +59,7 @@ int main(int argc, char **argv)
 	cout << endl;
 	cout << "Number of accounts created: " << Bank::Account::getNumberOfAccounts() << endl;
 	
+	Bank::Account account_5("000-00", "424.242.424-24", "io");
+	
 	return 0;
 }

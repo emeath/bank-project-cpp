@@ -14,6 +14,11 @@ Account::Account(std::string number, std::string cpf, std::string clientName)
 	numberOfAccounts++;
 }
 
+Account::~Account()
+{
+	numberOfAccounts--;
+}
+
 int Account::getNumberOfAccounts()
 {
 	return numberOfAccounts;
@@ -85,7 +90,7 @@ void Account::printAccount()
 	std::cout << "Account number: " << this->number << std::endl;
 	std::cout << "Account client name: " << this->clientName << std::endl;
 	std::cout << "Account cpf: " << this->cpf << std::endl;
-	std::cout << "Accounb balance: " << this->balance << std::endl;
+	std::cout << "Account balance: " << this->balance << std::endl;
 	std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
 }
 }

@@ -15,6 +15,8 @@ private:
 public:
 	Account(std::string number, std::string cpf, std::string clientName);
 	
+	~Account();
+	
 	static int getNumberOfAccounts();
 
 	void withdraw(float amount);

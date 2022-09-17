@@ -3,6 +3,22 @@
 
 namespace Bank
 {
+int Account::numberOfAccounts = 0;
+	
+Account::Account(std::string number, std::string cpf, std::string clientName)
+ : number(number),
+	cpf(cpf),
+	clientName(clientName),
+	balance(0)
+{
+	numberOfAccounts++;
+}
+
+int Account::getNumberOfAccounts()
+{
+	return numberOfAccounts;
+}
+	
 void Account::withdraw(float amount)
 {
 	if(balance < amount) {
@@ -28,7 +44,7 @@ void Account::deposit(float amount)
 	balance += amount;
 }
 
-float Account::getBalance()
+float Account::getBalance() const
 {
 	return balance;
 }

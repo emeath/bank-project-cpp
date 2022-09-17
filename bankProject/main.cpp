@@ -6,30 +6,23 @@
 
 using namespace std;
 
+void showBalance(const Bank::Account& account)
+{
+	cout << "balance=" << account.getBalance() << endl;
+}
+
 int main(int argc, char **argv)
 {
-	Bank::Account account_1;
-	account_1.setNumber("123-45");
-	account_1.setCpf("123.123.123-12");
-	account_1.setClientName("Kiko");
+	Bank::Account account_1("123-45", "123.123.123-12", "Kiko");
 	account_1.deposit(12345.6);
 	
-	Bank::Account account_2;
-	account_2.setNumber("098-76");
-	account_2.setCpf("256.456.456-78");
-	account_2.setClientName("Naruto");
+	Bank::Account account_2("098-76", "256.456.456-78", "Naruto");
 	account_2.deposit(123.3);
 	
-	Bank::Account account_3;
-	account_3.setNumber("394-23");
-	account_3.setCpf("323.232.123-43");
-	account_3.setClientName("Gohan");
+	Bank::Account account_3("394-23", "323.232.123-43", "Gohan");
 	account_3.deposit(3.40);
 	
-	Bank::Account account_4;
-	account_4.setNumber("122-00");
-	account_4.setCpf("xxx.xxx.xxx-xx");
-	account_4.setClientName("Trunks");
+	Bank::Account account_4("122-00", "xxx.xxx.xxx-xx", "Trunks");
 	account_4.deposit(333.33);
 	
 	cout << "First account: " << endl;
@@ -63,6 +56,8 @@ int main(int argc, char **argv)
 		account_4.printAccount();
 	}
 	
+	cout << endl;
+	cout << "Number of accounts created: " << Bank::Account::getNumberOfAccounts() << endl;
 	
 	return 0;
 }

@@ -9,13 +9,18 @@ private:
 	std::string number;
 	std::string cpf;
 	std::string clientName;
-	float balance = 0;
+	float balance;
+	static int numberOfAccounts;
 
 public:
+	Account(std::string number, std::string cpf, std::string clientName);
+	
+	static int getNumberOfAccounts();
+
 	void withdraw(float amount);
 	void deposit(float amount);
 
-	float getBalance();
+	float getBalance() const;
 
 	std::string getNumber();
 	void setNumber(std::string number);

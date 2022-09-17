@@ -1,24 +1,23 @@
 #pragma once
 #include <string>
+#include "Client.hpp"
 
 namespace Bank
 {
+
 class Account
 {
 private:
 	std::string number;
-	std::string cpf;
-	std::string clientName;
+	Bank::Client client;
 	float balance;
 	static int numberOfAccounts;
-	
-	void validateClientNameSize();
 
 public:
-	Account(std::string number, std::string cpf, std::string clientName);
-	
+	Account(std::string number, Bank::Client client);
+
 	~Account();
-	
+
 	static int getNumberOfAccounts();
 
 	void withdraw(float amount);
@@ -29,12 +28,7 @@ public:
 	std::string getNumber();
 	void setNumber(std::string number);
 
-	std::string getCpf();
-	void setCpf(std::string cpf);
-
-	std::string getClientName();
-	void setClientName(std::string clientName);
-
 	void printAccount();
 };
+
 }

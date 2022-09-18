@@ -93,6 +93,8 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="CPF.cpp"/>
+    <File Name="CPF.hpp"/>
     <File Name="Client.cpp"/>
     <File Name="Client.hpp"/>
     <File Name="Account.hpp"/>

@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-Bank::Client::Client(std::string clientName, std::string cpf) : clientName(clientName), cpf(cpf)
+Bank::Client::Client(std::string clientName, CPF cpf) : clientName(clientName), cpf(cpf)
 {
 	validateName();
 }
@@ -21,14 +21,9 @@ void Bank::Client::setName(std::string clientName)
 	this->clientName = clientName;
 }
 
-std::string Bank::Client::getCpf()
+Bank::CPF Bank::Client::getCpf()
 {
-	return this->cpf;
-}
-
-void Bank::Client::setCpf(std::string cpf)
-{
-	this->cpf = cpf;
+	return this->cpf.getCPF();
 }
 
 void Bank::Client::validateName()

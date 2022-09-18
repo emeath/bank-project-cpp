@@ -14,17 +14,17 @@ void showBalance(const Bank::Account& account)
 
 int main(int argc, char **argv)
 {
-	Bank::Client client_1("123.123.123-12", "Kiko");
+	Bank::Client client_1("Kiko", Bank::CPF("12312312312"));
 	Bank::Account account_1("123-45", client_1);
 	account_1.deposit(12345.6);
 	
-	Bank::Account account_2("098-76", Bank::Client("Naruto", "256.456.456-78"));
+	Bank::Account account_2("098-76", Bank::Client("Naruto", Bank::CPF("25645645678")));
 	account_2.deposit(123.3);
 	
-	Bank::Account account_3("394-23", Bank::Client("Gohan", "323.232.123-43"));
+	Bank::Account account_3("394-23", Bank::Client("Gohan",  Bank::CPF("32323212343")));
 	account_3.deposit(3.40);
 	
-	Bank::Account account_4("122-00", Bank::Client("Trunks", "xxx.xxx.xxx-xx"));
+	Bank::Account account_4("122-00", Bank::Client("Trunks",  Bank::CPF("12121212121")));
 	account_4.deposit(333.33);
 	
 	cout << "First account: " << endl;
@@ -61,7 +61,7 @@ int main(int argc, char **argv)
 	cout << endl;
 	cout << "Number of accounts created: " << Bank::Account::getNumberOfAccounts() << endl;
 	
-	Bank::Account account_5("000-00", Bank::Client("io", "424.242.424-24"));
+	Bank::Account account_5("000-00", Bank::Client("io",  Bank::CPF("42424242424")));
 	
 	return 0;
 }

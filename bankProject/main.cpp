@@ -12,7 +12,7 @@ void showBalance(const Bank::Account& account)
 	cout << "balance=" << account.getBalance() << endl;
 }
 
-int main(int argc, char **argv)
+int main2(int argc, char **argv)
 {
 	Bank::Client client_1("Kiko", Bank::CPF("12312312312"));
 	Bank::Account account_1("123-45", client_1);

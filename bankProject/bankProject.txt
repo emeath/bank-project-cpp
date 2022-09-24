@@ -1,1 +1,1 @@
-./Debug/main.cpp.o ./Debug/Client.cpp.o ./Debug/Account.cpp.o ./Debug/CPF.cpp.o
+./Debug/Client.cpp.o ./Debug/Account.cpp.o ./Debug/CPF.cpp.o ./Debug/main.cpp.o ./Debug/Person.cpp.o ./Debug/Employee.cpp.o

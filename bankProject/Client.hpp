@@ -1,28 +1,16 @@
 #pragma once
 #include <string>
 #include "CPF.hpp"
+#include "Person.hpp"
 
 namespace Bank
 {
 
-class Client
+class Client : public Person
 {
-private:
-	std::string clientName;
-	CPF cpf;
-
 public:
 	Client(std::string clientName, CPF cpf);
 	~Client();
-
-	std::string getName();
-	void setName(std::string clientName);
-
-	CPF getCpf();
-
-private:
-	void validateName();
-
 };
 
 }

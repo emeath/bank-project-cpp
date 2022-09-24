@@ -69,7 +69,7 @@ void Account::printAccount()
 	std::cout << "Account info: " << std::endl;
 	std::cout << "Account number: " << this->number << std::endl;
 	std::cout << "Account client name: " << this->client.getName() << std::endl;
-	std::cout << "Account cpf: " << this->client.getCpf().getCPF() << std::endl;
+	std::cout << "Account cpf: " << this->client.getCPF().getCPF() << std::endl;
 	std::cout << "Account balance: " << this->balance << std::endl;
 	std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
 }

@@ -15,6 +15,8 @@ private:
 public:
 	Person(std::string personName, Bank::CPF cpf);
 	~Person();
+	std::string getName();
+	CPF getCPF();
 private:
 	void validateName();
 };

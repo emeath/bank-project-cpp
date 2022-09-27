@@ -9,3 +9,8 @@ Bank::Client::Client(std::string clientName, CPF cpf) : Bank::Person(clientName,
 Bank::Client::~Client()
 {
 }
+
+std::string Bank::Client::getClientName() 
+{
+	
+}

@@ -11,6 +11,7 @@ class Client : public Person
 public:
 	Client(std::string clientName, CPF cpf);
 	~Client();
+	std::string getClientName();
 };
 
 }

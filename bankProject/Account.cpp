@@ -26,6 +26,9 @@ int Account::getNumberOfAccounts()
 	
 void Account::withdraw(float amount)
 {
+	float withdrawTax = amount * 0.05;
+	amount = amount + withdrawTax;
+	
 	if(balance < amount) {
 		std::cout << "Insuficcient balance to withdraw." << std::endl;
 		return;

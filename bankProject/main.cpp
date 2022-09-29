@@ -62,9 +62,14 @@ int main(int argc, char **argv)
 	cout << endl;
 	cout << "Number of accounts created: " << Bank::Account::getNumberOfAccounts() << endl;
 	
-	Bank::Account account_5("000-00", Bank::Client("io",  Bank::CPF("42424242424")));
+	Bank::Account account_5("000-00", Bank::Client("iooo iooo",  Bank::CPF("42424242424")));
 	
 	Bank::Employee emp("test test", Bank::CPF("12312312312"), 1000.0);
+	
+	Bank::Account account_6("122-00", Bank::Client("Inu Yasha",  Bank::CPF("12121212121")));
+	account_6.deposit(1000);
+	account_6.withdraw(100);
+	account_6.printAccount();
 	
 	return 0;
 }

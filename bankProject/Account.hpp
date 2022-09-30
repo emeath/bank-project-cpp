@@ -23,7 +23,7 @@ public:
 
 	static int getNumberOfAccounts();
 
-	void withdraw(float amount);
+	virtual void withdraw(float amount);
 	void deposit(float amount);
 
 	float getBalance() const;

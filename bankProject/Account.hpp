@@ -10,8 +10,11 @@ class Account
 private:
 	std::string number;
 	Bank::Client client;
-	float balance;
+
 	static int numberOfAccounts;
+
+protected:
+	float balance;
 
 public:
 	Account(std::string number, Bank::Client client);

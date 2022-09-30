@@ -3,6 +3,7 @@
 #include <array>
 
 #include "Account.hpp"
+#include "SavingsAccount.hpp"
 #include "Client.hpp"
 #include "Employee.hpp"
 
@@ -13,8 +14,25 @@ void showBalance(const Bank::Account& account)
 	cout << "balance=" << account.getBalance() << endl;
 }
 
+// POC
+void withdrawOnMain(Bank::Account& account)
+{
+	account.withdraw(100);
+}
+
 int main(int argc, char **argv)
 {
+	Bank::SavingsAccount sa_1("111-22", Bank::Client("Intel Core", Bank::CPF("12312312311")));
+	sa_1.deposit(1000);
+	withdrawOnMain(sa_1);
+	sa_1.printAccount();
+	
+	Bank::Account ac_poc("111-22", Bank::Client("AMD Ryzen", Bank::CPF("12312312311")));
+	ac_poc.deposit(1000);
+	withdrawOnMain(ac_poc);
+	ac_poc.printAccount();
+
+	
 	Bank::Client client_1("Kiko Saitama", Bank::CPF("12312312312"));
 	Bank::Account account_1("123-45", client_1);
 	account_1.deposit(12345.6);

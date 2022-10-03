@@ -16,6 +16,7 @@ Account::Account(std::string number, Bank::Client client)
 
 Account::~Account()
 {
+	std::cout << "Destructing Account instance!" << std::endl;
 	numberOfAccounts--;
 }
 

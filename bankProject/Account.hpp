@@ -19,7 +19,7 @@ protected:
 public:
 	Account(std::string number, Bank::Client client);
 
-	~Account();
+	virtual ~Account();
 
 	static int getNumberOfAccounts();
 

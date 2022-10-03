@@ -4,6 +4,11 @@ Bank::SavingsAccount::SavingsAccount(std::string number, Bank::Client client) : 
 {
 }
 
+Bank::SavingsAccount::~SavingsAccount()
+{
+	std::cout << "Destructing SavingsAccount instance!" << std::endl;
+}
+
 void Bank::SavingsAccount::withdraw(float amount) 
 {
 	float withdrawTax = amount * 0.015;

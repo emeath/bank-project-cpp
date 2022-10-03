@@ -23,7 +23,9 @@ public:
 
 	static int getNumberOfAccounts();
 
-	virtual void withdraw(float amount);
+	virtual float getTaxAmount() const;
+
+	void withdraw(float amount);
 	void deposit(float amount);
 
 	float getBalance() const;

@@ -24,10 +24,15 @@ int Account::getNumberOfAccounts()
 {
 	return numberOfAccounts;
 }
+
+float Account::getTaxAmount() const
+{
+	return 0.05;
+}
 	
 void Account::withdraw(float amount)
 {
-	float withdrawTax = amount * 0.05;
+	float withdrawTax = amount * getTaxAmount();
 	amount = amount + withdrawTax;
 	
 	if(balance < amount) {

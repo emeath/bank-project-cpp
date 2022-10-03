@@ -9,6 +9,11 @@ Bank::SavingsAccount::~SavingsAccount()
 	std::cout << "Destructing SavingsAccount instance!" << std::endl;
 }
 
+float Bank::SavingsAccount::getTaxAmount() const
+{
+	return 0.015;
+}
+
 void Bank::SavingsAccount::withdraw(float amount) 
 {
 	float withdrawTax = amount * 0.015;

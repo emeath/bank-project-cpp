@@ -24,12 +24,14 @@ int main(int argc, char **argv)
 {
 	Bank::SavingsAccount sa_1("111-22", Bank::Client("Intel Core", Bank::CPF("12312312311")));
 	sa_1.deposit(1000);
-	withdrawOnMain(sa_1);
+	//withdrawOnMain(sa_1);
+	sa_1.withdraw(100);
 	sa_1.printAccount();
 	
 	Bank::Account ac_poc("111-22", Bank::Client("AMD Ryzen", Bank::CPF("12312312311")));
 	ac_poc.deposit(1000);
-	withdrawOnMain(ac_poc);
+	//withdrawOnMain(ac_poc);
+	ac_poc.withdraw(100);
 	ac_poc.printAccount();
 
 	

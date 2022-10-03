@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=mm
-Date                   :=29/09/22
+Date                   :=02/10/22
 CodeLitePath           :=/home/mm/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/SavingsAccount.cpp$(ObjectSuffix) $(IntermediateDirectory)/Client.cpp$(ObjectSuffix) $(IntermediateDirectory)/Account.cpp$(ObjectSuffix) $(IntermediateDirectory)/CPF.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Person.cpp$(ObjectSuffix) $(IntermediateDirectory)/Employee.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/Client.cpp$(ObjectSuffix) $(IntermediateDirectory)/Account.cpp$(ObjectSuffix) $(IntermediateDirectory)/CPF.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Employee.cpp$(ObjectSuffix) $(IntermediateDirectory)/Person.cpp$(ObjectSuffix) $(IntermediateDirectory)/SavingsAccount.cpp$(ObjectSuffix) 
 
 
 
@@ -91,14 +91,6 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/SavingsAccount.cpp$(ObjectSuffix): SavingsAccount.cpp $(IntermediateDirectory)/SavingsAccount.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/mm/Workspaces/ws-cpp/bank-project-cpp/bankProject/SavingsAccount.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/SavingsAccount.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/SavingsAccount.cpp$(DependSuffix): SavingsAccount.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/SavingsAccount.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/SavingsAccount.cpp$(DependSuffix) -MM SavingsAccount.cpp
-
-$(IntermediateDirectory)/SavingsAccount.cpp$(PreprocessSuffix): SavingsAccount.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/SavingsAccount.cpp$(PreprocessSuffix) SavingsAccount.cpp
-
 $(IntermediateDirectory)/Client.cpp$(ObjectSuffix): Client.cpp $(IntermediateDirectory)/Client.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/mm/Workspaces/ws-cpp/bank-project-cpp/bankProject/Client.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Client.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Client.cpp$(DependSuffix): Client.cpp
@@ -131,6 +123,14 @@ $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 
+$(IntermediateDirectory)/Employee.cpp$(ObjectSuffix): Employee.cpp $(IntermediateDirectory)/Employee.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/mm/Workspaces/ws-cpp/bank-project-cpp/bankProject/Employee.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Employee.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Employee.cpp$(DependSuffix): Employee.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Employee.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Employee.cpp$(DependSuffix) -MM Employee.cpp
+
+$(IntermediateDirectory)/Employee.cpp$(PreprocessSuffix): Employee.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Employee.cpp$(PreprocessSuffix) Employee.cpp
+
 $(IntermediateDirectory)/Person.cpp$(ObjectSuffix): Person.cpp $(IntermediateDirectory)/Person.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/mm/Workspaces/ws-cpp/bank-project-cpp/bankProject/Person.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Person.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Person.cpp$(DependSuffix): Person.cpp
@@ -139,13 +139,13 @@ $(IntermediateDirectory)/Person.cpp$(DependSuffix): Person.cpp
 $(IntermediateDirectory)/Person.cpp$(PreprocessSuffix): Person.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Person.cpp$(PreprocessSuffix) Person.cpp
 
-$(IntermediateDirectory)/Employee.cpp$(ObjectSuffix): Employee.cpp $(IntermediateDirectory)/Employee.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/mm/Workspaces/ws-cpp/bank-project-cpp/bankProject/Employee.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Employee.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Employee.cpp$(DependSuffix): Employee.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Employee.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Employee.cpp$(DependSuffix) -MM Employee.cpp
+$(IntermediateDirectory)/SavingsAccount.cpp$(ObjectSuffix): SavingsAccount.cpp $(IntermediateDirectory)/SavingsAccount.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/mm/Workspaces/ws-cpp/bank-project-cpp/bankProject/SavingsAccount.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/SavingsAccount.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/SavingsAccount.cpp$(DependSuffix): SavingsAccount.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/SavingsAccount.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/SavingsAccount.cpp$(DependSuffix) -MM SavingsAccount.cpp
 
-$(IntermediateDirectory)/Employee.cpp$(PreprocessSuffix): Employee.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Employee.cpp$(PreprocessSuffix) Employee.cpp
+$(IntermediateDirectory)/SavingsAccount.cpp$(PreprocessSuffix): SavingsAccount.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/SavingsAccount.cpp$(PreprocessSuffix) SavingsAccount.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

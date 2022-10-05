@@ -23,7 +23,7 @@ public:
 
 	static int getNumberOfAccounts();
 
-	virtual float getTaxAmount() const;
+	virtual float getTaxAmount() const = 0;
 
 	void withdraw(float amount);
 	void deposit(float amount);

@@ -24,11 +24,6 @@ int Account::getNumberOfAccounts()
 {
 	return numberOfAccounts;
 }
-
-float Account::getTaxAmount() const
-{
-	return 0.05;
-}
 	
 void Account::withdraw(float amount)
 {

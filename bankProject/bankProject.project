@@ -93,6 +93,8 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="CheckingAccount.cpp"/>
+    <File Name="CheckingAccount.hpp"/>
     <File Name="SavingsAccount.cpp"/>
     <File Name="SavingsAccount.hpp"/>
     <File Name="Employee.cpp"/>

@@ -17,4 +17,5 @@ Clients are represented through class. It has some validation on name. The clien
 - Object composition
 - const functions
 - virtual functions
+- pure virtual function
 - Inheritance

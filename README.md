@@ -1,4 +1,4 @@
-# Bank Project C++
+# Bank Project c++
 
 Bank system project using C++ and OOP
 

@@ -8,3 +8,9 @@ float Bank::CheckingAccount::getTaxAmount() const
 {
 	return 0.05;
 }
+
+void Bank::CheckingAccount::transferMoney(Account& destiny, float amount)
+{
+	this->withdraw(amount);
+	destiny.deposit(amount);
+}

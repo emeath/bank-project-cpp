@@ -4,6 +4,11 @@ Bank::CheckingAccount::CheckingAccount(std::string number, Bank::Client client) 
 {
 }
 
+Bank::CheckingAccount::~CheckingAccount()
+{
+	std::cout << "Destructing CheckingAccount instance!" << std::endl;
+}
+
 float Bank::CheckingAccount::getTaxAmount() const
 {
 	return 0.05;

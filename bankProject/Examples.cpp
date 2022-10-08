@@ -88,6 +88,22 @@ void case4()
 	account_6.printAccount();
 }
 
+void case5()
+{
+	Bank::SavingsAccount savingsAccount("212142", Bank::Client("Ryan Howard", Bank::CPF("12345678910")));
+	Bank::CheckingAccount checkingAccount("424242", Bank::Client("Michael Scott", Bank::CPF("10987654321")));
+	
+	// Michael paycheck
+	checkingAccount.deposit(10000);
+	
+	// Michael pays Ryan
+	checkingAccount.transferMoney(savingsAccount, 3000);
+	
+	// Expected
+	bool michaelBalanceResult = checkingAccount.getBalance() == 6850;
+	bool ryanBalanceResult = savingsAccount.getBalance() == 3000;
+}
+
 void showBalance(const Bank::Account& account)
 {
 	std::cout << "balance=" << account.getBalance() << std::endl;

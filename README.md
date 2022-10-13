@@ -2,6 +2,8 @@
 
 Bank system project using C++ and OOP
 
+There are differents kind of account, employee, account owners, etc.
+
 ## Objectives
 
 This projects aims to practice and improve my knowledge in OOP usind C++

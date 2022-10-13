@@ -12,7 +12,8 @@ private:
 public:
 	Employee(std::string personName, Bank::CPF cpf, float salary);
 	~Employee();
-
+	float getSalary() const;
+	virtual float bonus() const = 0;
 };
 
 }

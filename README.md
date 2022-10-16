@@ -1,6 +1,6 @@
 # Bank Project c++
 
-Bank system project using C++ and OOP
+Bank system project using c++ and OOP
 
 There are differents kind of account, employee, account owners, etc.
 

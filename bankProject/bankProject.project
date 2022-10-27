@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Project Name="bankProject" Version="10.0.0" InternalType="Console">
+<CodeLite_Project Name="bankProject" Version="11000" InternalType="Console">
   <Description/>
   <Dependencies/>
+  <VirtualDirectory Name="src">
+    <File Name="bankProject.mk"/>
+    <File Name="bankProject.project"/>
+    <File Name="bankProject.txt"/>
+    <File Name="Cashier.cpp"/>
+    <File Name="Cashier.hpp"/>
+    <File Name="Manager.cpp"/>
+    <File Name="Manager.hpp"/>
+    <File Name="Examples.hpp"/>
+    <File Name="Examples.cpp"/>
+    <File Name="CheckingAccount.cpp"/>
+    <File Name="CheckingAccount.hpp"/>
+    <File Name="SavingsAccount.cpp"/>
+    <File Name="SavingsAccount.hpp"/>
+    <File Name="Employee.cpp"/>
+    <File Name="Employee.hpp"/>
+    <File Name="Person.cpp"/>
+    <File Name="Person.hpp"/>
+    <File Name="CPF.cpp"/>
+    <File Name="CPF.hpp"/>
+    <File Name="Client.cpp"/>
+    <File Name="Client.hpp"/>
+    <File Name="Account.hpp"/>
+    <File Name="Account.cpp"/>
+    <File Name="main.cpp"/>
+  </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
@@ -92,23 +118,4 @@
       </Completion>
     </Configuration>
   </Settings>
-  <VirtualDirectory Name="src">
-    <File Name="Examples.hpp"/>
-    <File Name="Examples.cpp"/>
-    <File Name="CheckingAccount.cpp"/>
-    <File Name="CheckingAccount.hpp"/>
-    <File Name="SavingsAccount.cpp"/>
-    <File Name="SavingsAccount.hpp"/>
-    <File Name="Employee.cpp"/>
-    <File Name="Employee.hpp"/>
-    <File Name="Person.cpp"/>
-    <File Name="Person.hpp"/>
-    <File Name="CPF.cpp"/>
-    <File Name="CPF.hpp"/>
-    <File Name="Client.cpp"/>
-    <File Name="Client.hpp"/>
-    <File Name="Account.hpp"/>
-    <File Name="Account.cpp"/>
-    <File Name="main.cpp"/>
-  </VirtualDirectory>
 </CodeLite_Project>

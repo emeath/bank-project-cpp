@@ -78,14 +78,17 @@ void case3()
 
 void case4()
 {
-	Bank::CheckingAccount account_5("000-00", Bank::Client("iooo iooo",  Bank::CPF("42424242424")));
 	
-	Bank::Employee emp("test test", Bank::CPF("12312312312"), 1000.0);
+    Bank::CheckingAccount account_5("000-00", Bank::Client("iooo iooo",  Bank::CPF("42424242424")));
+	
+    // Employee class is absctract now
+	//Bank::Employee emp("test test", Bank::CPF("12312312312"), 1000.0);
 	
 	Bank::CheckingAccount account_6("122-00", Bank::Client("Inu Yasha",  Bank::CPF("12121212121")));
 	account_6.deposit(1000);
 	account_6.withdraw(100);
 	account_6.printAccount();
+    
 }
 
 void case5()

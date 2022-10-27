@@ -9,3 +9,7 @@ Bank::Employee::~Employee()
 {
 }
 
+float Bank::Employee::getSalary() const
+{
+    return this->salary;
+}

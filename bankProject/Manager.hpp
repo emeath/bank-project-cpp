@@ -1,12 +1,14 @@
 #pragma once
 
 #include "Employee.hpp"
+#include "Authenticable.hpp"
 
 namespace Bank
 {
-    class Manager : public Employee
+    class Manager : public Employee, public Authenticable
     {
-        Manager(std::string personName, Bank::CPF cpf, float salary);
+    public:
+        Manager(std::string personName, Bank::CPF cpf, float salary, std::string password);
         float bonus() const override;
     };
 }

@@ -1,11 +1,12 @@
 #include "Manager.hpp"
 
-Bank::Manager::Manager(std::string personName, Bank::CPF cpf, float salary) 
-    : Employee(personName, cpf, salary)
+Bank::Manager::Manager(std::string personName, Bank::CPF cpf, float salary, std::string password) 
+    : Employee(personName, cpf, salary),
+      Authenticable(password)
 {
 }
 
 float Bank::Manager::bonus() const
 {
-    return 0.50 * this->getSalary();
+    return 1.50 * this->getSalary();
 }

@@ -8,6 +8,8 @@
 #include "Client.hpp"
 #include "Employee.hpp"
 #include "Examples.hpp"
+#include "Manager.hpp"
+#include "Authenticable.hpp"
 
 
 void case1()
@@ -107,6 +109,12 @@ void case5()
 	bool ryanBalanceResult = savingsAccount.getBalance() == 3000;
 }
 
+void case6()
+{
+    Bank::Manager manager("Michael Scott", Bank::CPF("12345678910"), 5000, "bestBoss4ever");
+    doAuthenticate(manager, "bestBoss4ever");
+}
+
 void showBalance(const Bank::Account& account)
 {
 	std::cout << "balance=" << account.getBalance() << std::endl;
@@ -116,4 +124,12 @@ void showBalance(const Bank::Account& account)
 void withdrawOnMain(Bank::Account& account)
 {
 	account.withdraw(100);
+}
+
+void doAuthenticate(Bank::Authenticable& user, std::string password)
+{
+    if(user.authenticate(password))
+    {
+        std::cout << "User sucessfully logged in!" << std::endl;
+    }
 }

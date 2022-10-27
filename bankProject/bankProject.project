@@ -3,6 +3,8 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="Authenticable.cpp"/>
+    <File Name="Authenticable.hpp"/>
     <File Name="bankProject.mk"/>
     <File Name="bankProject.project"/>
     <File Name="bankProject.txt"/>

@@ -10,6 +10,6 @@ namespace Bank
         std::string password;
     public:
         Authenticable(std::string password);
-        bool authenticate(std::string password);
+        bool authenticate(std::string password) const;
     };
 }

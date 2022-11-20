@@ -10,7 +10,7 @@
 #include "Examples.hpp"
 #include "Manager.hpp"
 #include "Authenticable.hpp"
-
+#include "Cashier.hpp"
 
 void case1()
 {
@@ -115,6 +115,15 @@ void case6()
     doAuthenticate(manager, "bestBoss4ever");
 }
 
+void case7()
+{
+    Bank::Cashier cashier("John Dow", Bank::CPF("12345678910"), 3000, WeekDay::Friday);
+    std::cout << "-> " << (int) cashier.getWeekDay() << std::endl;
+}
+
+
+
+
 void showBalance(const Bank::Account& account)
 {
 	std::cout << "balance=" << account.getBalance() << std::endl;
@@ -126,7 +135,7 @@ void withdrawOnMain(Bank::Account& account)
 	account.withdraw(100);
 }
 
-void doAuthenticate(Bank::Authenticable& user, std::string password)
+void doAuthenticate(const Bank::Authenticable& user, std::string password)
 {
     if(user.authenticate(password))
     {

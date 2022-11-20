@@ -3,6 +3,7 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="WeekDay.hpp"/>
     <File Name="Authenticable.cpp"/>
     <File Name="Authenticable.hpp"/>
     <File Name="bankProject.mk"/>

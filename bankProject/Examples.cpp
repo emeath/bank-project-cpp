@@ -128,6 +128,11 @@ void case8()
     std::cout << "Balance = " << ca.getBalance() << std::endl;
     ca += 700.00;
     std::cout << "Balance = " << ca.getBalance() << std::endl;
+    
+    ca - 500;
+    std::cout << "Balance = " << ca.getBalance() << std::endl;
+    ca -= 200;
+    std::cout << "Balance = " << ca.getBalance() << std::endl;
 }
 
 

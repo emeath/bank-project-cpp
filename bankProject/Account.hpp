@@ -37,6 +37,8 @@ public:
     
     void operator+(float amount);
     void operator+=(float amount);
+    void operator-(float amount);
+    void operator-=(float amount);
 };
 
 }

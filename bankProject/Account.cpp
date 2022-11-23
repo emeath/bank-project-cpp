@@ -88,4 +88,14 @@ void Account::operator+=(float amount)
     this->deposit(amount);
 }
 
+void Account::operator-(float amount)
+{
+    this->withdraw(amount);
+}
+
+void Account::operator-=(float amount)
+{
+    this->withdraw(amount);
+}
+
 }

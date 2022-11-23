@@ -121,6 +121,14 @@ void case7()
     std::cout << "-> " << (int) cashier.getWeekDay() << std::endl;
 }
 
+void case8()
+{
+    Bank::CheckingAccount ca("12233", Bank::Client("Jessie", Bank::CPF("12345678910")));
+    ca + 300.00;
+    std::cout << "Balance = " << ca.getBalance() << std::endl;
+    ca += 700.00;
+    std::cout << "Balance = " << ca.getBalance() << std::endl;
+}
 
 
 

@@ -14,6 +14,6 @@ using namespace std;
 
 int main(int argc, char **argv)
 {	
-	case7();
+	case8();
 	return 0;
 }

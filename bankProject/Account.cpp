@@ -78,4 +78,14 @@ void Account::printAccount()
 	std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
 }
 
+void Account::operator+(float amount)
+{
+    this->deposit(amount);
+}
+
+void Account::operator+=(float amount)
+{
+    this->deposit(amount);
+}
+
 }

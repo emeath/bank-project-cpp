@@ -34,6 +34,9 @@ public:
 	void setNumber(std::string number);
 
 	void printAccount();
+    
+    void operator+(float amount);
+    void operator+=(float amount);
 };
 
 }
